@@ -42,7 +42,7 @@ int main(void) {
 	} else {
 	    tmpD1 = 0x00;
 	}
-	finalD = (weight & 0x00FC) | tmpD1 | tmpD0;
+	finalD = ((weight >> 2) & 0xFC) | tmpD1 | tmpD0;
 	PORTD = finalD;
     }
     return 0;
